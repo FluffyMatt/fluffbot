@@ -12,14 +12,18 @@ bot.on('ready', function() {
 });
 
 bot.on('message', function(user, userID, channelID, message, rawEvent) {
-    if (message == '!live') {
-        var live = http.get('http://api.twitch.tv/kraken/streams/'+user, function(response) {
-            var body;
-            response.on('data', function(chunk){
-                body += chunk;
-            });
-            console.log(body);
+    if (message == '@FluffBot#7794 Hello') {
+        bot.sendMessage({
+            to: channelID,
+            message: "@"+userID+"I'm still be built sorry!",
+            typing: true,
         });
-
+    }
+    if (message == '!Hello') {
+        bot.sendMessage({
+            to: userID,
+            message: "I'm still be built sorry!",
+            typing: true,
+        });
     }
 });
