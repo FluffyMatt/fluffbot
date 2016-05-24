@@ -32,6 +32,20 @@ fluffbot.on("message", function(message) {
             }
         });
     }
+    if (message.content.indexOf("!flip") > -1) {
+        if (message.mentions) {
+            if (message.mentions[0].username == 'FluffBot') {
+                fluffbot.reply(message, "How dare you? Let's see how you like it! (╯°□°）╯︵ "+flipString(message.author.username));
+            } else {
+                fluffbot.reply(message, "(╯°□°）╯︵ "+flipString(message.mentions[0].username));
+            }
+        } else {
+        	fluffbot.reply(message, coin[Math.floor((Math.random() * 2) + 1)]);
+        }
+    }
+    if (message.content.indexOf("!seppuku") > -1) {
+        fluffbot.reply(message, "pulls out their tantō and disembowels themselves!");
+    }
 });
 
 function searchBuild(search) {
@@ -46,4 +60,75 @@ function searchBuild(search) {
     formattedTerms = terms.join('+');
 
     return formattedTerms;
+}
+
+function flipString(aString) {
+    var last = aString.length - 1;
+    var result = new Array(aString.length)
+    for (var i = last; i >= 0; --i) {
+        var c = aString.charAt(i)
+        var r = flipTable[c]
+        result[last - i] = r != undefined ? r : c
+    }
+    return result.join('')
+}
+
+var flipTable = {
+    a : 'ɐ',
+    b : 'q',
+    c : 'ɔ',
+    d : 'p',
+    e : 'ǝ',
+    f : 'ɟ',
+    g : 'ƃ',
+    h : 'ɥ',
+    i : 'ᴉ',
+    j : 'ɾ',
+    k : 'ʞ',
+    l : 'l',
+    m : 'ɯ',
+    n : 'u',
+    o : 'o',
+    p : 'd',
+    q : 'b',
+    r : 'ɹ',
+    s : 's',
+    t : 'ʇ',
+    u : 'n',
+    v : 'ʌ',
+    w : 'ʍ',
+    x : 'x',
+    y : 'ʎ',
+    z : 'z',
+    A : '∀',
+    B : 'q',
+    C : 'Ɔ',
+    D : 'p',
+    E : 'Ǝ',
+    F : 'Ⅎ',
+    G : 'פ',
+    H : 'H',
+    I : 'I',
+    J : 'ſ',
+    K : 'ʞ',
+    L : '˥',
+    M : 'W',
+    N : 'N',
+    O : 'O',
+    P : 'Ԁ',
+    Q : 'Q',
+    R : 'ᴚ',
+    S : 'S',
+    T : '┴',
+    U : '∩',
+    V : 'Λ',
+    W : 'M',
+    X : 'X',
+    Y : '⅄',
+    Z : 'Z',
+}
+
+var coin = {
+    1 : 'Heads',
+    2 : 'Tails'
 }
