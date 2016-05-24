@@ -48,6 +48,9 @@ fluffbot.on("message", function(message) {
     if (message.content.indexOf("!seppuku") > -1) {
         fluffbot.reply(message, "pulls out their tantō and disembowels themselves!");
     }
+    if (message.content === "(╯°□°）╯︵ ʇʇɐɯʎɟɟnןɟ") {
+        fluffbot.reply(message, "https://media.giphy.com/media/3o85xuO1siCT147FrG/giphy.gif");
+    }
 });
 
 function searchBuild(search) {
