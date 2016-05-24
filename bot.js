@@ -33,7 +33,7 @@ fluffbot.on("message", function(message) {
         });
     }
     if (message.content.indexOf("!flip") > -1) {
-        if (message.mentions) {
+        if (message.mentions.length > 0) {
             if (message.mentions[0].username == 'FluffBot') {
                 fluffbot.reply(message, "How dare you? Let's see how you like it! (╯°□°）╯︵ "+flipString(message.author.username));
             } else {
