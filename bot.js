@@ -13,7 +13,7 @@ fluffbot.on("message", function(message) {
         var search = searchBuild(message.content.split(" "));
         request("http://api.giphy.com/v1/gifs/search?q="+search+"&limit=100&api_key=dc6zaTOxFJmzC", function (error, response, body){
             if (error || response.statusCode !== 200) {
-                fluffbot.replyTTS(message, "Couldn't get an image");
+                fluffbot.reply(message, "Couldn't get an image");
             }
             else {
                 response = JSON.parse(body);
@@ -25,9 +25,9 @@ fluffbot.on("message", function(message) {
                 if (count > 0) {
                     var random = Math.floor((Math.random() * count) + 1);
                     var gif = response.data[random].url;
-                    fluffbot.replyTTS(message, gif);
+                    fluffbot.reply(message, gif);
                 } else {
-                    fluffbot.replyTTS(message, "No image found");
+                    fluffbot.reply(message, "No image found");
                 }
             }
         });
