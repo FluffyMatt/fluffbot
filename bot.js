@@ -36,6 +36,8 @@ fluffbot.on("message", function(message) {
         if (message.mentions.length > 0) {
             if (message.mentions[0].username == 'FluffBot') {
                 fluffbot.reply(message, "How dare you? Let's see how you like it! (╯°□°）╯︵ "+flipString(message.author.username));
+            } else if (message.mentions[0].username == 'FluffyMatt') {
+                fluffbot.reply(message, "https://media.giphy.com/media/3o85xuO1siCT147FrG/giphy.gif");
             } else {
                 fluffbot.reply(message, "(╯°□°）╯︵ "+flipString(message.mentions[0].username));
             }
