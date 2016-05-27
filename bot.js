@@ -2,7 +2,7 @@ var Discord = require("discord.js");
 var request = require("request");
 var fluffbot = new Discord.Client();
 
-fluffbot.loginWithToken("MTc5MTY3NTM0NjUyNzE5MTA0.Ch8bgw.7X1cBjzvpsb28hwvnfFkyCCvi4c");
+fluffbot.loginWithToken("");
 
 fluffbot.on("ready", function(event) {
     fluffbot.setPlayingGame("Alpha v0.1");
