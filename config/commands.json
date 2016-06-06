@@ -1,0 +1,18 @@
+{
+	"seppuku": {
+		"help": "!seppuku",
+		"description": "Allows the user to disembowel themselves",
+		"response": "pulls out their tantō and disembowels themselves!"
+	},
+	"flip": {
+		"help": "!flip | !flip @username",
+		"description": "Allows the user to flip a coin or a user",
+		"file": "./commands/flip.js"
+	},
+	"gifr": {
+		"help": "!gifr | !gifr search term",
+		"description": "Show a random gif or show a random gif based on a search term",
+		"file": "./commands/gifr.js"
+	}
+
+}
