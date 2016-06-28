@@ -17,21 +17,14 @@ Gif.prototype.run = function() {
 
 // Get a random gif based on the search term provided
 Gif.prototype.getGif = function() {
-	request("http://api.giphy.com/v1/gifs/search?q="+this.searchTerm+"&limit=100&api_key=dc6zaTOxFJmzC", function (error, response, body){
+	request("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="+this.searchTerm, function (error, response, body){
 		if (error || response.statusCode !== 200) {
 			event.bus.sendEvent('response', messageObj,  "Couldn't get an image")
 		}
 		else {
 			response = JSON.parse(body)
-			if (response.pagination.total_count > 100) {
-				var count = 100
-			} else {
-				var count = response.pagination.total_count
-			}
-			if (count > 0) {
-				var random = Math.floor((Math.random() * count) + 1);
-				var gif = response.data[random].url
-				event.bus.sendEvent('response', messageObj, gif)
+			if (typeof(response.data.url) != 'undefined') {
+				event.bus.sendEvent('response', messageObj, response.data.url)
 			} else {
 				event.bus.sendEvent('response', messageObj, "No image found")
 			}
