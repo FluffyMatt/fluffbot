@@ -21,7 +21,7 @@ discord.on('serverCreated', function(server) {
 
 // Event listener for new member joining
 discord.on('serverNewMember', function(server, user) {
-	this.sendMessage(server.generalChannel ,'@everyone Welcome '+user.toString()+' to the Fluff Fam');
+	this.sendMessage(server.generalChannel ,'@everyone Welcome '+user.toString()+' to the Fam');
 })
 
 // Event listener for member being removed
