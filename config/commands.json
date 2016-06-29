@@ -4,6 +4,16 @@
 		"description": "Allows the user to disembowel themselves",
 		"response": "pulls out their tantō and disembowels themselves!"
 	},
+	"fail": {
+		"help": "There is no help for failing!",
+		"description": "You failed",
+		"response": "http://i.giphy.com/3o7ZexFSShwaxOSY12.gif"
+	},
+	"facepalm": {
+		"help": "WHen you simply need a facepalmed Picard",
+		"description": "...",
+		"response": "http://i.giphy.com/zNrg4ulntLBMk.gif"
+	},
 	"flip": {
 		"help": "flip @username",
 		"description": "Allows the user to flip a user",
