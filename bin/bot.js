@@ -1,7 +1,7 @@
 // Include needed files
-var fluffbot = require('./lib/fluffbot')
+var fluffbot = require('../lib/fluffbot')
 var discord = require('discord.js')
-var event = require('./lib/event')
+var event = require('../lib/event')
 
 // Instantiate bots
 var fluffbot = new fluffbot()
