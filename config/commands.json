@@ -23,5 +23,20 @@
 		"help": "gifr | gifr search term",
 		"description": "Show a random gif or show a random gif based on a search term",
 		"file": "../commands/gif.js"
+	},
+	"yt": {
+		"help": "youtube",
+		"description": "Post a youtube video to the channel",
+		"file": "../commands/youtube.js"
+	},
+	"urban": {
+		"help": "urban",
+		"description": "Find out the urban meaning behind a word",
+		"file": "../commands/urban.js"
+	},
+	"imgur": {
+		"help": "imgur",
+		"description": "Find an image from imgur",
+		"file": "../commands/imgur.js"
 	}
 }
