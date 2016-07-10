@@ -31,9 +31,12 @@ discord.on('serverMemberRemoved', function(server, user) {
 
 // Event listener registered
 event.bus.on('response', function(message, data) {
-	discord.startTyping(message)
 	discord.reply(message, data)
-	discord.stopTyping(message)
+})
+
+// Event listener registered
+event.bus.on('message', function(message, data) {
+	discord.sendMessage(message, data)
 })
 
 // Message event listener
