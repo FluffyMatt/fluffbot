@@ -5,7 +5,7 @@ var event = require('../lib/event')
 var messageObj
 
 // Main class Constructor
-var Gif = function Constructor(message, owner, bot){
+var Gif = function Constructor(message, owner, bot, settings){
 	messageObj = message
 	this.searchTerm = searchBuild(message.content.split(" "))
 }

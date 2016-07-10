@@ -2,7 +2,7 @@
 var event = require('../lib/event')
 
 // Flip class initialisation
-var Flip = function Constructor(message, owner, bot) {
+var Flip = function Constructor(message, owner, bot, settings) {
 	this.message = message
 	this.mentionsOwner = owner
 	this.mentionsBot = bot
