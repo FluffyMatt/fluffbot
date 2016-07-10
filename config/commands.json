@@ -24,5 +24,4 @@
 		"description": "Show a random gif or show a random gif based on a search term",
 		"file": "../commands/gif.js"
 	}
-
 }
