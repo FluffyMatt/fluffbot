@@ -11,7 +11,7 @@ discord.loginWithToken(fluffbot.settings.bot_token)
 
 // Initiate the playing game to say the current version
 discord.on('ready', function(event) {
-	this.setPlayingGame('Alpha v2.0')
+	this.setPlayingGame('Alpha v2.0.1 by FluffyMatt')
 })
 
 // Event listener when bot is added to a server
