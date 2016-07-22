@@ -24,11 +24,6 @@ discord.on('serverNewMember', function(server, user) {
 	this.sendMessage(server.generalChannel ,'@everyone Welcome '+user.toString()+' to the Fam');
 })
 
-// Event listener for member being removed
-discord.on('serverMemberRemoved', function(server, user) {
-	this.sendMessage(server.generalChannel ,'@everyone '+user.toString()+' was removed');
-})
-
 // Event listener registered
 event.bus.on('response', function(message, data) {
 	discord.reply(message, data)
