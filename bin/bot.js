@@ -5,7 +5,7 @@ var event = require('../lib/event')
 
 // Instantiate bots
 var fluffbot = new fluffbot()
-discord = new discord.Client()
+discord = new discord.Client({autoReconnect:true})
 
 discord.loginWithToken(fluffbot.settings.bot_token)
 
