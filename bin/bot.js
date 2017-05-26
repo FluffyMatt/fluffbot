@@ -7,7 +7,7 @@ var event = require('../lib/event')
 var fluffbot = new fluffbot()
 discord = new discord.Client({autoReconnect:true})
 
-discord.loginWithToken(fluffbot.settings.bot_token)
+discord.login(fluffbot.settings.bot_token)
 
 // Initiate the playing game to say the current version
 discord.on('ready', function(event) {
