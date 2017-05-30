@@ -31,7 +31,7 @@ event.bus.on('response', function(message, data) {
 
 // Event listener registered
 event.bus.on('message', function(message, data) {
-	discord.sendMessage(message, data)
+	message.reply(data)
 })
 
 // Message event listener
