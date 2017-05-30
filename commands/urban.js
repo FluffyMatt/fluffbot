@@ -25,6 +25,7 @@ Urban.prototype.getUrban = function() {
 		}
 		else {
 			response = JSON.parse(body)
+			console.log(response.list);
 			if (response.result_type != 'no_results') {
 				event.bus.sendEvent('message', messageObj, '**'+search+'** \n ```'+response.list[0].definition+'``` \n **Example:** '+response.list[0].example)
 			} else {

@@ -34,10 +34,10 @@ Flip.prototype.ownerResponse = function() {
 
 // Main flip response call
 Flip.prototype.respond = function() {
-	if (typeof(this.message.mentions[0]) == 'undefined') {
+	if (this.message.mentions.members.size == 0) {
 		event.bus.sendEvent('response', this.message,  "Invalid user")
 	} else {
-		event.bus.sendEvent('response', this.message,  "(╯°□°）╯︵ "+flipString(this.message.mentions[0].username))
+		event.bus.sendEvent('response', this.message,  "(╯°□°）╯︵ "+flipString(this.message.mentions.users.first().username))
 	}
 }
 

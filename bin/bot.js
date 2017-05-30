@@ -26,7 +26,7 @@ discord.on('serverNewMember', function(server, user) {
 
 // Event listener registered
 event.bus.on('response', function(message, data) {
-	discord.reply(message, data)
+	message.reply(data)
 })
 
 // Event listener registered
