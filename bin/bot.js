@@ -21,7 +21,7 @@ discord.on('guildCreate', function(server) {
 
 // Event listener for new member joining
 discord.on('guildMemberAdd', function(member) {
-	member.defaultChannel.send(`@here Welcome ${member} to the Fam`);
+	member.guild.defaultChannel.send(`@here Welcome ${member} to the Fam`);
 })
 
 // Event listener registered
